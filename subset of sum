@@ -1,0 +1,11 @@
+def subset(x,k,s=[],i=0):
+    if i==len(x):
+        if k==0:
+            print(s)
+        return
+    if x[i]<=k:
+        subset(x,k-x[i],s+[x[i]],i+1)
+    subset(x,k,s,i+1)
+a=[2,3,4,5]
+k=9
+subset(a,k)
